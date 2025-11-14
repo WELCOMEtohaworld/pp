@@ -1,0 +1,23 @@
+@use "breakpoint" as bp;
+
+@mixin mobile {
+  @media (max-width: bp.$breakPoint-mobile) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: bp.$breakPoint-desktop) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin layout {
+  width: 90%;
+  margin: 0 auto;
+}

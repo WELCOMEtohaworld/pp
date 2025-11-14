@@ -1,0 +1,10 @@
+@use "mixin" as m;
+
+// 헤더
+#header {
+  @include m.layout;
+
+  // @include m.desktop {
+
+  // }
+}
