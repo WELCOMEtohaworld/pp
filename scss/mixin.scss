@@ -13,6 +13,7 @@
 
 // 정렬 관련
 @mixin flex {
+  width: 100%;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
@@ -20,14 +21,19 @@
 
 @mixin flex-center {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
 }
 
 @mixin layout {
   width: 90%;
   margin: 0 auto;
+}
+
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 //색상 관련

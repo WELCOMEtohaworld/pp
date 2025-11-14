@@ -128,9 +128,8 @@ input {
 }
 #header .header-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
   margin: 2rem 0;
 }
 #header .header-box .tag {
@@ -141,6 +140,7 @@ input {
   width: 100%;
 }
 .menu .menu-box {
+  width: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -189,6 +189,47 @@ input {
 .sub-sub .sub-sub-a > a:hover {
   font-weight: 700;
   color: red;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 8.5rem);
+}
+.hero-container .hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  margin: 0 auto;
+}
+.hero-container .back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.front {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.front > img {
+  width: 70%;
+}
+.front .back {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.front .back > img {
+  width: 70%;
 }
 
 /*# sourceMappingURL=style.css.map */

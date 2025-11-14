@@ -1,1 +1,37 @@
 @use "mixin" as m;
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 8.5rem);
+
+  .hero {
+    position: absolute;
+    @include m.center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .back {
+    position: absolute;
+    @include m.center;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.front {
+  width: 100%;
+  @include m.flex-center;
+  & > img {
+    width: 70%;
+  }
+
+  .back {
+    width: 100%;
+    @include m.flex-center;
+    & > img {
+      width: 70%;
+    }
+  }
+}
