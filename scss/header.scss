@@ -1,5 +1,16 @@
 @use "mixin" as m;
 
+a,
+p,
+h1,
+h2,
+h3,
+li,
+dt,
+dd {
+  color: var(--color-text);
+}
+
 // 헤더
 #header {
   @include m.layout;
@@ -48,7 +59,7 @@
   opacity: 0;
   visibility: hidden;
   @include m.effect;
-  background: #fff;
+  background: var(--color-card);
   padding: 1.5rem 2rem 1.5rem 2rem;
   margin-top: 1rem;
   border-radius: 20px;
@@ -88,4 +99,16 @@
       @include m.color;
     }
   }
+}
+.modeBtn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  @include m.flex;
+  margin-left: -10px;
+  padding-top: 5px;
+}
+.modeBtn > img {
+  width: 25px;
+  height: 25px;
 }

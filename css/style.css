@@ -133,6 +133,17 @@ input {
     margin-top: 0;
   }
 }
+a,
+p,
+h1,
+h2,
+h3,
+li,
+dt,
+dd {
+  color: var(--color-text);
+}
+
 #header {
   width: 90%;
   margin: 0 auto;
@@ -183,7 +194,7 @@ input {
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease-in;
-  background: #fff;
+  background: var(--color-card);
   padding: 1.5rem 2rem 1.5rem 2rem;
   margin-top: 1rem;
   border-radius: 20px;
@@ -219,6 +230,23 @@ input {
   color: red;
 }
 
+.modeBtn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-left: -10px;
+  padding-top: 5px;
+}
+
+.modeBtn > img {
+  width: 25px;
+  height: 25px;
+}
+
 @font-face {
   font-family: "Font01";
   src: url("../fonts/Amelina-Script.woff2") format("woff2"), url("../fonts/Amelina-Script.woff") format("woff"), url("../fonts/Amelina-Script.ttf") format("truetype");
@@ -227,11 +255,9 @@ input {
   font-family: "Font02";
   src: url("../fonts/Fair-Prosper.woff2") format("woff2"), url("../fonts/Fair-Prosper.woff") format("woff"), url("../fonts/Fair-Prosper.ttf") format("truetype");
 }
-.modeBtn {
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  background: var(--c-btn);
+body {
+  background: var(--color-bg);
+  overflow-x: hidden;
 }
 
 .hero-container {
@@ -280,7 +306,7 @@ input {
   width: 100%;
   height: 90%;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--color-front);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 10px;
@@ -301,7 +327,7 @@ input {
   position: absolute;
   width: 90%;
   aspect-ratio: 7/4.2;
-  background: #fff;
+  background: #f5f5f5;
   left: 50%;
   transform: translateX(-50%);
   bottom: 6%;
@@ -309,6 +335,7 @@ input {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   transform-style: preserve-3d;
+  transform-origin: center center;
 }
 @media (min-width: 1200px) {
   .profile-txt-box {
@@ -323,6 +350,35 @@ input {
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+.hero.active .profile-txt-box::after {
+  content: "↓click!";
+  color: red;
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
+
+.hero.active .card-face.back2 {
+  visibility: hidden;
+}
+
+.hero.active .card-face.front2 {
+  visibility: visible;
+}
+
+.profile-txt-box.top {
+  transform: translateZ(10px) translateX(-50%) scale(1.5);
+  z-index: 10;
+}
+
+.profile-txt-box.top .card-face.front2 {
+  visibility: hidden;
+}
+
+.profile-txt-box.top .card-face.back2 {
+  visibility: visible;
+}
+
 /* PROFILE 텍스트 */
 .profile {
   position: absolute;
@@ -333,6 +389,7 @@ input {
   font-size: 16.5vw;
   line-height: 1;
   white-space: nowrap;
+  color: #111;
 }
 @media (min-width: 1200px) {
   .profile {
@@ -403,6 +460,20 @@ input {
   }
 }
 
+.card-face.back2 {
+  visibility: hidden;
+}
+
+.card-face.back2 {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.profile-back {
+  padding-top: 0.5rem;
+}
+
 /* 뒷배경 이미지 */
 .hero .back {
   opacity: 0.7;
@@ -414,7 +485,7 @@ input {
   width: 100%;
   height: 92%;
   bottom: 0;
-  background: #fff;
+  background: var(--color-back);
   border-radius: 0 10px 10px 10px;
   z-index: 1;
 }
@@ -430,7 +501,7 @@ input {
   width: 45%;
   height: 15%;
   top: 0;
-  background: #fff;
+  background: var(--color-back);
   border-radius: 10px 50px 0 0;
   z-index: 1;
 }

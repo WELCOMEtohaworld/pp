@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/root.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <title>KIM HA BIN Portfolio</title>
   </head>
   <body>
-    <button class="modeBtn"></button>
     <header id="header">
       <div class="header-box">
         <h1 class="tag">Portfolio</h1>
@@ -36,21 +36,39 @@
                 </li>
               </ul>
             </li>
-            <li class="menu-title">About me</li>
+            <li class="menu-title aboutme">About me</li>
+            <li class="menu-title">
+              <button class="modeBtn">
+                <img src="img/light_border.png" />
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
+    <div class="about-me-hide">
+      <div class="about-me-card"></div>
+    </div>
     <main id="main">
       <div class="hero-container">
         <section class="hero">
           <div class="front"></div>
 
           <div class="profile-txt-box">
-            <h2 class="profile">
-              ABOUT <br /><span class="profile-me">ME</span>
-            </h2>
+            <!-- 앞면 -->
+            <div class="card-face front2">
+              <h2 class="profile">
+                ABOUT <br /><span class="profile-me">ME</span>
+              </h2>
+            </div>
+            <!-- 뒷면 -->
+            <div class="card-face back2">
+              <h3 class="profile-back">
+                저는 <span class="profile-me-back">도전하는 디자이너</span
+                ><br /><span class="profile-me-back">김하빈입니다</span>
+              </h3>
+            </div>
           </div>
 
           <div class="back"></div>
@@ -115,7 +133,7 @@
         </dl>
       </section>
     </main>
-    <script src="js/root.js" defer></script>
+    <script src="js/mode.js" defer></script>
     <script src="js/header.js"></script>
     <script src="js/main.js"></script>
   </body>

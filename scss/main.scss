@@ -1,15 +1,8 @@
 @use "mixin" as m;
 @use "fonts";
-// body {
-//   background: #242424;
-//   overflow-x: hidden;
-// }
-
-.modeBtn {
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  background: var(--c-btn);
+body {
+  background: var(--color-bg);
+  overflow-x: hidden;
 }
 
 // 최상위 컨테이너
@@ -53,7 +46,7 @@
   width: 100%; // 카드 너비
   height: 90%; // 카드 높이
   bottom: 0; // 아래쪽 기준
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--color-front);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 10px;
@@ -73,7 +66,7 @@
   position: absolute;
   width: 90%;
   aspect-ratio: 7 / 4.2;
-  background: #fff;
+  background: #f5f5f5;
   left: 50%;
   transform: translateX(-50%);
   bottom: 6%;
@@ -81,6 +74,7 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   transform-style: preserve-3d;
+  transform-origin: center center;
 
   @include m.desktop {
     width: 90%;
@@ -88,11 +82,39 @@
     bottom: 7.5%;
   }
 }
+
+// 메인 폴더에 마우스 올리거나 클릭했을 시
 .hero.active .profile-txt-box {
   transform: translateX(-50%) translateY(-50%) rotate(5deg);
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+} //위치 변경되고 각도 변경되고 쉐도우 효과
+.hero.active .profile-txt-box::after {
+  content: "↓click!";
+  color: red;
+  position: absolute;
+  top: -30px;
+  right: 0;
+} // 메인폴더 기준으로 텍스트 나타남
+
+.hero.active .card-face.back2 {
+  visibility: hidden;
+} //도전하는 디자이너 어쩌고 사라짐
+.hero.active .card-face.front2 {
+  visibility: visible;
 }
 
+// .hero.active 실행된 후 한번 더 클릭 시
+.profile-txt-box.top {
+  transform: translateZ(10px) translateX(-50%) scale(1.5);
+  z-index: 10;
+}
+.profile-txt-box.top .card-face.front2 {
+  visibility: hidden;
+}
+
+.profile-txt-box.top .card-face.back2 {
+  visibility: visible;
+}
 /* PROFILE 텍스트 */
 .profile {
   position: absolute;
@@ -103,6 +125,7 @@
   font-size: 16.5vw;
   line-height: 1;
   white-space: nowrap;
+  color: #111;
 
   @include m.desktop {
     top: -5px;
@@ -167,6 +190,20 @@
     padding-top: 2rem;
   }
 }
+
+// 카드 뒷부분 텍스트
+.card-face.back2 {
+  visibility: hidden;
+}
+.card-face.back2 {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+.profile-back {
+  padding-top: 0.5rem;
+}
+
 /* 뒷배경 이미지 */
 .hero .back {
   opacity: 0.7;
@@ -177,7 +214,7 @@
   width: 100%;
   height: 92%;
   bottom: 0;
-  background: #fff;
+  background: var(--color-back);
   border-radius: 0 10px 10px 10px;
   z-index: 1;
   @include m.desktop {
@@ -191,7 +228,7 @@
   width: 45%;
   height: 15%;
   top: 0;
-  background: #fff;
+  background: var(--color-back);
   border-radius: 10px 50px 0 0;
   z-index: 1;
 
