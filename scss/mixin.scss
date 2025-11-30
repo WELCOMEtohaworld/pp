@@ -5,6 +5,11 @@
     @content;
   }
 }
+@mixin tablet {
+  @media (min-width: bp.$breakPoint-tablet) {
+    @content;
+  }
+}
 @mixin desktop {
   @media (min-width: bp.$breakPoint-desktop) {
     @content;
@@ -44,4 +49,19 @@
 //애니메이션
 @mixin effect {
   transition: all 0.2s ease-in;
+}
+@keyframes floating-emoji {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: var(--float-distance);
+  } // CSS 변수로 거리 제어
+  100% {
+    margin-top: 0;
+  }
+}
+@mixin floating($duration: 3s, $distance: 15px) {
+  --float-distance: -#{$distance}; // 위로 올라가게 음수
+  animation: floating-emoji $duration ease-in-out infinite;
 }
