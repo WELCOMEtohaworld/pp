@@ -3,6 +3,7 @@
   --color-bg: #f5f5f5;
   --color-text: #111;
   --color-card: #fff;
+  --color-card50: #ffffff50;
   --color-front: rgba(0, 0, 0, 0.3);
   --color-back: #bcbcbc;
   --shadow-soft: rgba(0, 0, 0, 0.15);
@@ -15,6 +16,7 @@
   --color-bg: #242424;
   --color-text: #f5f5f5;
   --color-card: #313131;
+  --color-card50: #31313150;
   --color-front: rgba(255, 255, 255, 0.3);
   --color-back: #f5f5f5;
   --shadow-soft: rgba(255, 255, 255, 0.5);
