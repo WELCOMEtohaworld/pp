@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/root.css" />
+    <link rel="stylesheet" href="css/style-detail.css" />
+
+    <title>KIM HA BIN Portfolio</title>
+  </head>
+  <body>
+    <!-- 헤더(공통 컴포넌트) -->
+    <header id="header">
+      <div class="header-box">
+        <a href="index.html">
+          <h1 class="tag">Portfolio</h1>
+        </a>
+        <nav class="menu">
+          <ul class="menu-box">
+            <li class="menu-title">
+              Menu
+              <ul class="sub-box">
+                <li class="sub-title">
+                  Project
+                  <ul class="sub-sub">
+                    <li class="sub-sub-a"><a href="">팀프로젝트</a></li>
+                    <li class="sub-sub-a"><a href="">반응형</a></li>
+                    <li class="sub-sub-a"><a href="">모바일</a></li>
+                    <li class="sub-sub-a"><a href="">사이드</a></li>
+                  </ul>
+                </li>
+                <li class="sub-title">
+                  Contact
+                  <ul class="sub-sub">
+                    <li class="sub-sub-a"><a href="">깃허브</a></li>
+                    <li class="sub-sub-a"><a href="">팀 깃허브</a></li>
+                    <li class="sub-sub-a"><a href="">메일</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-title">
+              <a
+                href="http://bhpo.dothome.co.kr/blog/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Tech blog
+                <ul class="sub-box">
+                  <li class="sub-title-d">
+                    버튼을 클릭하시면 <br />
+                    다양한 시행착오가 포함된 <br />개발 노트로 이동합니다
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="menu-title aboutme">About me</li>
+            <li class="menu-title">
+              <button class="modeBtn">
+                <img class="light-icon" src="img/light_border.png" />
+                <img class="dark-icon" src="img/dark.png" />
+              </button>
+              <div class="indicator"></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- 상단 이미지 -->
+      <div class="main-top">
+        <div class="main-top-img"></div>
+      </div>
+      <!-- 각 섹션을 전부 감싸는 박스 -->
+      <div class="project-container">
+        <!-- 섹션1 -->
+        <section class="project-hero">
+          <div class="project-title-box">
+            <h1 class="project-title">MOVE IN Web Service</h1>
+            <p class="project-title-ex">Student Team Project</p>
+          </div>
+          <div class="project-ex-box">
+            <div class="project-duration">
+              <p class="sec-title top">Duration</p>
+              <span class="sec-more">5 Weeks</span>
+            </div>
+            <div class="project-contribution">
+              <p class="sec-title top">Contribution</p>
+              <span class="sec-more">50%</span>
+            </div>
+          </div>
+        </section>
+        <hr />
+
+        <!-- 섹션2 -->
+        <section class="project-summary">
+          <div class="project-overview">
+            <h2 class="sec-title">Overview</h2>
+            <span class="sec-more">기획의도를 적는 곳</span>
+          </div>
+          <div class="project-myrole">
+            <h2 class="sec-title">My Role</h2>
+            <span class="sec-more"
+              ><span class="point-text">나의 역할:</span> 이 무엇이었는지 적어야
+              함</span
+            >
+          </div>
+        </section>
+        <hr />
+        <!-- 섹션3 -->
+        <section class="project-ido">
+          <h2 class="sec-title">What I Did & Solved</h2>
+          <ul class="ido-lists">
+            <li class="ido-list">내가 한 일들 리스트1</li>
+            <li class="ido-list">내가 한 일들 리스트2</li>
+            <li class="ido-list">내가 한 일들 리스트3</li>
+            <li class="ido-list">내가 한 일들 리스트4</li>
+          </ul>
+        </section>
+        <hr />
+        <!-- 섹션4 -->
+        <section class="project-results">
+          <div class="project-title-box">
+            <h2 class="project-title">Result Screens</h2>
+            <p class="project-title-ex">결과물 스크린샷 및 설명</p>
+          </div>
+          <div class="main-results">
+            <div class="results-img"></div>
+            <div class="results-ex">
+              <h3 class="results-title">Main Screen</h3>
+              <span class="results-title-more">메인 이미지에 대한 설명</span>
+            </div>
+          </div>
+          <div class="content-results">
+            <div class="results-img"></div>
+            <div class="results-ex">
+              <h3 class="results-title">Content Page Structure</h3>
+              <span class="results-title-more">메인 이미지에 대한 설명</span>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <!-- 섹션5 -->
+        <section class="project-preview">
+          <div class="project-title-box">
+            <h2 class="project-title">Mobile Preview</h2>
+            <button
+              class="project-title-ex toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobile-preview"
+            >
+              <span class="toggle-text">View Mobile Screen</span>
+              <span class="toggle-hint">(click to expand)</span>
+              <span class="toggle-icon">▶</span>
+            </button>
+          </div>
+          <div id="mobile-preview" hidden>모바일</div>
+        </section>
+        <hr />
+        <!-- 섹션6 -->
+        <section class="project-used-skills">
+          <div class="used-skills-title">
+            <h2 class="project-title">Used Skills</h2>
+            <span class="project-title-ex">사용한 스킬들</span>
+          </div>
+          <div class="used-skills-listbox">
+            <ul class="used-skills-list">
+              <li class="used-skill">
+                <img src="img/html.png" alt="html" />
+              </li>
+              <li class="used-skill"><img src="img/css.png" alt="css" /></li>
+              <li class="used-skill">
+                <img src="img/js.png" alt="javascript" />
+              </li>
+              <li class="used-skill">
+                <img src="img/jquery.png" alt="jquery" />
+              </li>
+              <li class="used-skill">
+                <img src="img/git.png" alt="github" />
+              </li>
+              <li class="used-skill">
+                <img src="img/ps.png" alt="photoshop" />
+              </li>
+              <li class="used-skill">
+                <img src="img/ai.png" alt="Illustrator" />
+              </li>
+              <li class="used-skill"><img src="img/php.png" alt="php" /></li>
+              <li class="used-skill">
+                <img src="img/sql.png" alt="mysql" />
+              </li>
+            </ul>
+          </div>
+        </section>
+        <hr />
+        <!-- 섹션7 -->
+        <section class="project-meta">
+          <div class="project-links-title">
+            <h2 class="project-title">Links</h2>
+            <span class="project-title-ex">프로젝트 관련 링크들</span>
+          </div>
+          <div class="project-links-box">
+            <ul class="project-links-list">
+              <li class="project-link">
+                <a href="#" target="_blank" rel="noopener noreferrer">기획서</a>
+                <div class="preview-img">
+                  <img class="img" src="img/team1.jpg" alt="기획서 바로가기" />
+                </div>
+              </li>
+              <li class="project-link">
+                <a
+                  href="https://www.figma.com/design/ukPiOGRpnL9JhePgToNUU5/%EB%AC%B4%EB%B8%8C%EC%9D%B8-%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%8B%9C%EC%95%88?node-id=0-1&p=f&t=BmMBFtbk8UyTtwBB-0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >와이어프레임</a
+                >
+                <div class="preview-img">
+                  <img
+                    class="img"
+                    src="img/team2.jpg"
+                    alt="와이어프레임 바로가기"
+                  />
+                </div>
+              </li>
+              <li class="project-link">
+                <a
+                  href="https://www.figma.com/board/skbEdCxaMFfasWakP3sppz/%EC%A0%95%EB%B3%B4%EA%B5%AC%EC%A1%B0%EC%84%A4%EA%B3%84?node-id=0-1&p=f&t=jd3ijbk3OSqnaaH0-0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >정보구조설계</a
+                >
+                <div class="preview-img">
+                  <img
+                    class="img"
+                    src="img/team3.jpg"
+                    alt="정보구조설계 바로가기"
+                  />
+                </div>
+              </li>
+              <li class="project-link">
+                <a
+                  href="https://www.notion.so/2806055f57738055a72cdd870ce93472"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >노션 일정관리</a
+                >
+                <div class="preview-img">
+                  <img class="img" src="img/team4.jpg" alt="노션 바로가기" />
+                </div>
+              </li>
+              <li class="project-link">
+                <a
+                  href="https://github.com/projectTeam-LKKH/movein"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >깃허브</a
+                >
+                <div class="preview-img">
+                  <img class="img" src="img/team5.jpg" alt="깃허브 바로가기" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <hr />
+        <!-- 섹션8 -->
+        <section class="project-navigation">
+          <div class="navigation-box">
+            <a class="prev-btn">&lt; Previous Project</a>
+            <a class="next-btn">Next Project &gt;</a>
+          </div>
+          <div class="contact-box">
+            <ul class="contact-list">
+              <li class="contact"><a href="#">Contact </a></li>
+              <li class="contact"><a href="#">Resume </a></li>
+              <li class="contact">
+                <a class="last" href="#">Portfolio Home</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- 각 섹션을 전부 감싸는 박스 끝 -->
+      <!-- 위로 올라가는 버튼-->
+      <button
+        class="btn-top"
+        id="btnTop"
+        type="button"
+        aria-label="맨 위로 이동"
+      >
+        <span class="top-txt">↑</span>
+      </button>
+    </main>
+    <script src="js/mode.js" defer></script>
+    <script src="js/header.js"></script>
+    <script src="js/detail.js"></script>
+  </body>
+</html>

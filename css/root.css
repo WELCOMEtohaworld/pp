@@ -4,6 +4,7 @@
   --color-bg-trans: #f5f5f550;
   --color-soft: #11111110;
   --color-text: #111;
+  --color-text-trans: #11111190;
   --color-card: #fff;
   --color-card50: #ffffff60;
   --color-front: rgba(0, 0, 0, 0.3);
@@ -19,6 +20,7 @@
   --color-bg-trans: #24242460;
   --color-soft: #f5f5f510;
   --color-text: #f5f5f5;
+  --color-text-trans: #f5f5f590;
   --color-card: #313131;
   --color-card50: #31313150;
   --color-front: rgba(255, 255, 255, 0.3);

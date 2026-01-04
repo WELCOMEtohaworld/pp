@@ -1,45 +1,6 @@
 @use "mixin" as m;
 @use "fonts";
 
-// 맨 위로 버튼
-.btn-top {
-  opacity: 0;
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 32px;
-  height: 40px;
-  background: var(--color-back);
-  border: none;
-  border-radius: 50px;
-  backdrop-filter: blur(15px);
-  pointer-events: none;
-  transition: all 0.5s ease;
-  z-index: 40;
-}
-.top-txt {
-  display: inline-block;
-  font-size: 1.7rem;
-  color: var(--color-bg);
-  animation: upDown 1.2s ease-in-out infinite alternate;
-}
-@keyframes upDown {
-  0% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
-.btn-top:hover {
-  border-radius: 5px;
-}
-.btn-top.show {
-  opacity: 1;
-  pointer-events: auto;
-  cursor: pointer;
-}
-
 body {
   background: var(--color-bg);
   overflow-x: hidden;

@@ -1,0 +1,240 @@
+@use "mixin" as m;
+@use "fonts";
+// 공통
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+button:hover {
+  color: var(--color-text);
+}
+
+// 추후 이미지 넣었을 때 갈아끼워줘야 함
+#main {
+  padding-top: 80px;
+  width: 100%;
+}
+.main-top {
+  width: 100%;
+  height: 500px;
+  background: lightgray;
+}
+
+// 전체 레이아웃
+.project-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 960px;
+}
+section {
+  padding-top: 2rem;
+}
+hr {
+  display: block;
+  margin-top: 2.5rem;
+  border: none;
+  border-top: 1px solid var(--shadow-soft);
+}
+// 전체 텍스트
+.project-title {
+  letter-spacing: -0.05rem;
+  font-weight: 500;
+  font-size: 32px;
+}
+.project-title-ex {
+  letter-spacing: -0.01rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-trans);
+}
+.sec-title {
+  letter-spacing: -0.01rem;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+.sec-title.top {
+  padding-bottom: 0.3rem;
+}
+.sec-more {
+  letter-spacing: -0.01rem;
+  font-weight: 400;
+  color: var(--color-text-trans);
+}
+.results-title {
+  font-weight: 500;
+  font-size: 24px;
+}
+.results-title-more {
+  font-weight: 500;
+  color: var(--color-text-trans);
+}
+
+// 섹션1 레이아웃
+.project-hero {
+  padding-top: 5rem;
+  @include m.detail-grid;
+}
+
+.project-ex-box {
+  display: flex;
+  justify-self: end;
+  gap: 3rem;
+}
+
+// 섹션2
+.project-summary {
+  @include m.detail-grid;
+}
+
+// 섹션3
+.ido-list {
+  color: var(--color-text-trans);
+  letter-spacing: -0.01rem;
+  font-weight: 400;
+}
+
+// 섹션4
+.project-results {
+  padding-top: 5rem;
+}
+.main-results {
+  padding-top: 2rem;
+}
+.results-ex {
+  padding: 2rem 0;
+  @include m.detail-grid;
+}
+.results-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  background: var(--color-front);
+}
+
+// 섹션5
+.toggle-icon {
+  font-size: 16px;
+}
+
+// 섹션6
+.project-used-skills {
+  display: flex;
+  justify-content: space-between;
+}
+.used-skills-list {
+  display: flex;
+  gap: 10px;
+}
+.used-skill {
+  width: 70px;
+  aspect-ratio: 1/1;
+  background: var(--color-soft);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.used-skill > img {
+  width: 45px;
+  height: 45px;
+}
+
+// 섹션7
+.project-meta {
+  @include m.detail-grid;
+}
+
+.project-links-list {
+  position: relative;
+  z-index: 0;
+}
+.project-link {
+  width: 100%;
+  display: block;
+
+  padding: 0.2rem 0;
+  border-bottom: 1px solid var(--shadow-soft);
+  margin-bottom: 0.5rem;
+  padding-left: 0.3rem;
+
+  & > a {
+    color: var(--color-text-trans);
+  }
+
+  &:hover {
+    border-bottom: 1px solid var(--color-text);
+  }
+
+  &:hover a {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+}
+.preview-img {
+  position: absolute;
+  z-index: 1;
+  width: 330px;
+
+  top: 0;
+  right: 0;
+  box-shadow: 1px 1px 10px var(--shadow-soft);
+
+  transition: opacity 1s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.project-link.is-hover .preview-img {
+  opacity: 1;
+}
+.img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: flex;
+  border-radius: 10px;
+}
+
+// 섹션8
+.project-navigation {
+  margin-bottom: 2rem;
+}
+.navigation-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.prev-btn,
+.next-btn {
+  cursor: pointer;
+  color: var(--color-text-trans);
+}
+
+.contact-box {
+  display: flex;
+  justify-content: end;
+  padding-top: 2rem;
+}
+.contact-list {
+  display: flex;
+  gap: 10px;
+}
+.contact > a {
+  font-size: 14px;
+  color: var(--color-text-trans);
+
+  &::after {
+    content: "·";
+    display: inline-block;
+  }
+  &:hover {
+    color: var(--color-text);
+  }
+}
+
+.contact .last::after {
+  content: "";
+}

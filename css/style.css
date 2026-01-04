@@ -88,7 +88,6 @@ section {
   display: block;
 }
 
-/*html5 새로 추가된 요소들은 블록요소로 인식되지 않음. 이 요소들은 대부분 블록요소일 경우가 대부분이기때문에 한꺼번에 선언함.*/
 a {
   text-decoration: none;
   color: black;
@@ -137,7 +136,8 @@ input {
 body {
   background: var(--color-bg);
   overflow-x: hidden;
-  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 a,
@@ -294,17 +294,21 @@ dd {
 }
 
 /* 다크 모드일 때 indicator 이동 */
-:root[data-theme=dark] .indicator {
+:root[data-theme="dark"] .indicator {
   transform: translateX(30px);
 }
 
 @font-face {
   font-family: "Font01";
-  src: url("../fonts/Amelina-Script.woff2") format("woff2"), url("../fonts/Amelina-Script.woff") format("woff"), url("../fonts/Amelina-Script.ttf") format("truetype");
+  src: url("../fonts/Amelina-Script.woff2") format("woff2"),
+    url("../fonts/Amelina-Script.woff") format("woff"),
+    url("../fonts/Amelina-Script.ttf") format("truetype");
 }
 @font-face {
   font-family: "Font02";
-  src: url("../fonts/Fair-Prosper.woff2") format("woff2"), url("../fonts/Fair-Prosper.woff") format("woff"), url("../fonts/Fair-Prosper.ttf") format("truetype");
+  src: url("../fonts/Fair-Prosper.woff2") format("woff2"),
+    url("../fonts/Fair-Prosper.woff") format("woff"),
+    url("../fonts/Fair-Prosper.ttf") format("truetype");
 }
 .btn-top {
   opacity: 0;
@@ -921,6 +925,7 @@ body {
 .deteil-btn > img {
   width: 8px;
   height: 15px;
+  opacity: 0.3;
   cursor: pointer;
 }
 
